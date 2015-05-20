@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/StudyJWP.iml" filepath="$PROJECT_DIR$/StudyJWP.iml" />
+      <module fileurl="file://$PROJECT_DIR$/web04/web04.iml" filepath="$PROJECT_DIR$/web04/web04.iml" />
+      <module fileurl="file://$PROJECT_DIR$/web05/web05.iml" filepath="$PROJECT_DIR$/web05/web05.iml" />
     </modules>
   </component>
 </project>
