@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="spms.dao.ProjectDao">
+    <resultMap type="project" id="projectResultMap">
+        <id column="pno" property="no"/>
+        <result column="pname" property="title"/>
+        <result column="content" property="content"/>
+        <result column="sta_date" property="startDate" javaType="java.sql.Date"/>
+        <result column="end_date" property="endDate" javaType="java.sql.Date"/>
+        <result column="state" property="state"/>
+        <result column="cre_date" property="createdDate" javaType="java.sql.Date"/>
+        <result column="tags" property="tags"/>
+    </resultMap>
+
+    <select id="selectList" parameterType="map" resultMap="projectResultMap">
+        SELECT pno, pname, sta_date, end_date, state
+        FROM projects
+        ORDER BY
+        <choose>
+            <when test="orderCond == 'TITLE_ASC'">pname ASC</when>
+            <when test="orderCond == 'TITLE_DESC'">pname DESC</when>
+            <when test="orderCond == 'STARTDATE_ASC'">sta_date ASC</when>
+            <when test="orderCond == 'STARTDATE_DESC'">sta_date DESC</when>
+            <when test="orderCond == 'ENDDATE_ASC'">end_date ASC</when>
+            <when test="orderCond == 'ENDDATE_DESC'">end_date DESC</when>
+            <when test="orderCond == 'STATE_ASC'">state ASC</when>
+            <when test="orderCond == 'STATE_DESC'">state DESC</when>
+            <when test="orderCond == 'PNO_ASC'">pno ASC</when>
+            <otherwise>pno DESC</otherwise>
+        </choose>
+    </select>
+
+    <insert id="insert" parameterType="project">
+        INSERT INTO projects (pname, content, sta_date, end_date, state, cre_date, tags)
+                VALUES (#{title}, #{content}, #{startDate}, #{endDate}, 0, now(), #{tags})
+    </insert>
+
+    <select id="selectOne" parameterType="int" resultMap="projectResultMap">
+        SELECT pno, pname, content, sta_date, end_date, state, cre_date, tags
+        FROM projects
+        WHERE pno=#{value}
+    </select>
+
+    <update id="update" parameterType="map">
+        UPDATE projects
+        <set>
+            <if test="title != null">pname=#{title},</if>
+            <if test="content != null">content=#{content},</if>
+            <if test="startDate != null">sta_date=#{startDate},</if>
+            <if test="endDate != null">end_date=#{endDate},</if>
+            <if test="state != null">state=#{state},</if>
+            <if test="tags != null">tags=#{tags}</if>
+        </set>
+        WHERE pno=#{no}
+    </update>
+
+    <delete id="delete" parameterType="int">
+        DELETE FROM projects
+        WHERE pno=#{value}
+    </delete>
+</mapper>

@@ -1,0 +1,19 @@
+<component name="libraryTable">
+  <library name="mybatis-3.3.0">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../../lib/java/mybatis-3.3.0/mybatis-3.3.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../../lib/java/mybatis-3.3.0/lib/asm-4.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../../lib/java/mybatis-3.3.0/lib/cglib-3.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../../lib/java/mybatis-3.3.0/lib/commons-logging-1.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../../lib/java/mybatis-3.3.0/lib/log4j-1.2.17.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../../lib/java/mybatis-3.3.0/lib/log4j-api-2.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../../lib/java/mybatis-3.3.0/lib/log4j-core-2.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../../lib/java/mybatis-3.3.0/lib/slf4j-api-1.7.12.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../../lib/java/mybatis-3.3.0/lib/slf4j-log4j12-1.7.12.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.ideaLibSources/mybatis-3.3.0-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

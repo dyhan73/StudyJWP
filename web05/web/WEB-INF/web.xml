@@ -4,26 +4,19 @@
          xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
          version="3.1">
 
-<!-- Context parameter -->
-<context-param>
-    <param-name>driver</param-name>
-    <param-value>com.mysql.jdbc.Driver</param-value>
-</context-param>
-<context-param>
-    <param-name>url</param-name>
-    <param-value>jdbc:mysql://localhost/studydb</param-value>
-</context-param>
-<context-param>
-    <param-name>username</param-name>
-    <param-value>study</param-value>
-</context-param>
-<context-param>
-    <param-name>password</param-name>
-    <param-value>TestStudy00</param-value>
-</context-param>
+    <context-param>
+        <param-name>contextConfigLocation</param-name>
+        <param-value>/META-INF/application-context.properties</param-value>
+    </context-param>
+
+    <resource-ref>
+        <res-ref-name>jdbc/studydb</res-ref-name>
+        <res-type>javax.sql.DataSource</res-type>
+        <res-auth>Container</res-auth>
+    </resource-ref>
+
 
 <!-- Filters -->
-<!--
 <filter>
     <filter-name>CharacterEncodingFilter</filter-name>
     <filter-class>spms.filters.CharacterEncodingFilter</filter-class>
@@ -37,35 +30,7 @@
     <filter-name>CharacterEncodingFilter</filter-name>
     <url-pattern>/*</url-pattern>
 </filter-mapping>
--->
 
-<!--
-<servlet>
-    <servlet-name>MemberUpdateServlet</servlet-name>
-    <servlet-class>spms.servlets.MemberUpdateServlet</servlet-class>
-    <init-param>
-        <param-name>driver</param-name>
-        <param-value>com.mysql.jdbc.Driver</param-value>
-    </init-param>
-    <init-param>
-        <param-name>url</param-name>
-        <param-value>jdbc:mysql://localhost/studydb</param-value>
-    </init-param>
-    <init-param>
-        <param-name>username</param-name>
-        <param-value>study</param-value>
-    </init-param>
-    <init-param>
-        <param-name>password</param-name>
-        <param-value>TestStudy00</param-value>
-    </init-param>
-</servlet>
-
-<servlet-mapping>
-    <servlet-name>MemberUpdateServlet</servlet-name>
-    <url-pattern>/member/update</url-pattern>
-</servlet-mapping>
--->
 
 <welcome-file-list>
     <welcome-file>index.html</welcome-file>

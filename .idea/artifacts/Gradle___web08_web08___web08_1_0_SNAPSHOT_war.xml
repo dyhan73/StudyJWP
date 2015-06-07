@@ -1,0 +1,29 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="Gradle : web08:web08 : web08-1.0-SNAPSHOT.war">
+    <output-path>$PROJECT_DIR$/out/artifacts/web08</output-path>
+    <properties id="gradle-properties">
+      <options external-project-path="$PROJECT_DIR$/web08" />
+    </properties>
+    <root id="archive" name="web08-1.0-SNAPSHOT.war">
+      <element id="javaee-facet-resources" facet="web08/web/Web Gradle : web08-1.0-SNAPSHOT.war" />
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="web08" />
+          <element id="dir-copy" path="$PROJECT_DIR$/web08/build/resources/main" />
+        </element>
+        <element id="directory" name="lib">
+          <element id="library" level="project" name="Gradle: org.springframework:spring-context:4.1.6.RELEASE" />
+          <element id="library" level="project" name="Gradle: org.springframework:spring-aop:4.1.6.RELEASE" />
+          <element id="library" level="project" name="Gradle: org.springframework:spring-beans:4.1.6.RELEASE" />
+          <element id="library" level="project" name="Gradle: org.springframework:spring-core:4.1.6.RELEASE" />
+          <element id="library" level="project" name="Gradle: org.springframework:spring-expression:4.1.6.RELEASE" />
+          <element id="library" level="project" name="Gradle: aopalliance:aopalliance:1.0" />
+          <element id="library" level="project" name="Gradle: commons-logging:commons-logging:1.2" />
+        </element>
+      </element>
+      <element id="directory" name="META-INF">
+        <element id="file-copy" path="$PROJECT_DIR$/out/artifacts/web08/exploded/web08-1.0-SNAPSHOT.war/META-INF/MANIFEST.MF" />
+      </element>
+    </root>
+  </artifact>
+</component>

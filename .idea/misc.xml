@@ -5,6 +5,7 @@
   </component>
   <component name="FrameworkDetectionExcludesConfiguration">
     <file type="web" url="file://$PROJECT_DIR$/web04" />
+    <file type="web" url="file://$PROJECT_DIR$/web08" />
   </component>
   <component name="JsBowerSettings">
     <exe-path />
